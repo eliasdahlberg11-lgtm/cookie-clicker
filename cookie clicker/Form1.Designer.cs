@@ -37,9 +37,10 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.image_removebg_preview;
-            pictureBox1.Location = new Point(21, 82);
+            pictureBox1.Location = new Point(30, 137);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(255, 251);
+            pictureBox1.Size = new Size(364, 418);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -48,20 +49,21 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(121, 50);
+            label1.Location = new Point(173, 83);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(22, 25);
             label1.TabIndex = 1;
-            label1.Text = "label1";
-            label1.Click += label1_Click;
+            label1.Text = "0";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
