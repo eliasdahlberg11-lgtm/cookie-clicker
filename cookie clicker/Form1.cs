@@ -9,7 +9,11 @@ namespace cookie_clicker
 
         int counter = 0;
         int multiplier = 1;
-
+        int cost = 5;
+        int lvl = 1;
+        int cost2 = 100;
+        int lvl2 = 1;
+        int multiplier2 = 1;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -26,19 +30,37 @@ namespace cookie_clicker
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
 
-            if ((counter >= 10) && (multiplier == 1))
+
+            if (counter >= cost)
             {
-                multiplier = 2;
+                counter = counter - cost;
+                multiplier = multiplier * 10;
+                lvl = lvl + 1;
+                label2.Text = "Multiplier lvl " + lvl.ToString();
+                cost = cost * 8;
+                label3.Text = "Cost" + cost;
             }
-            else if ((counter >= 50) && (multiplier == 2))
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (counter >= cost)
             {
-                multiplier = 3;
+                lvl2 = lvl2 + 1;
+                label5.Text = "Granny" + lvl2;
+                counter = counter - cost2;
+                timer1.Enabled = true;
+                multiplier2 = multiplier2 * 10;
+                cost2 = cost2 * 5;
+                label4.Text = "Cost " + cost2;
             }
+        }
 
-            label2.Text = "Multiplier lvl " + multiplier.ToString();
-
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            counter = counter + multiplier2;
         }
     }
 }

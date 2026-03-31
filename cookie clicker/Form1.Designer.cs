@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
             label3 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
+            button3 = new Button();
+            label4 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -85,15 +90,52 @@
             label3.AutoSize = true;
             label3.Location = new Point(880, 359);
             label3.Name = "label3";
-            label3.Size = new Size(81, 25);
+            label3.Size = new Size(63, 25);
             label3.TabIndex = 4;
-            label3.Text = "COST 10";
+            label3.Text = "Cost 5";
+            // 
+            // timer1
+            // 
+            timer1.Interval = 3000;
+            timer1.Tick += timer1_Tick;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 25F);
+            button3.Location = new Point(439, 437);
+            button3.Name = "button3";
+            button3.Size = new Size(409, 107);
+            button3.TabIndex = 6;
+            button3.Text = "BUY GRANNY";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(880, 481);
+            label4.Name = "label4";
+            label4.Size = new Size(83, 25);
+            label4.TabIndex = 7;
+            label4.Text = "Cost 100";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(439, 243);
+            label5.Name = "label5";
+            label5.Size = new Size(105, 25);
+            label5.TabIndex = 8;
+            label5.Text = "Granny lvl 1";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 750);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(button3);
             Controls.Add(label3);
             Controls.Add(button1);
             Controls.Add(label2);
@@ -114,5 +156,9 @@
         private Label label2;
         private Button button1;
         private Label label3;
+        private System.Windows.Forms.Timer timer1;
+        private Button button3;
+        private Label label4;
+        private Label label5;
     }
 }
