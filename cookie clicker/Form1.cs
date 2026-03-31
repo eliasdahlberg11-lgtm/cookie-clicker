@@ -61,6 +61,15 @@ namespace cookie_clicker
         private void timer1_Tick(object sender, EventArgs e)
         {
             counter = counter + multiplier2;
+            if (counter == 1)
+            {
+                label1.Text = counter.ToString() + " cookie";
+            }
+            else
+            {
+                label1.Text = counter.ToString() + " cookies";
+            }
+
         }
     }
 }
